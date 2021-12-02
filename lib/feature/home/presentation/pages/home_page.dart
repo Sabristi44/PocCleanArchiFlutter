@@ -1,14 +1,15 @@
-import 'package:exercice_guillaume/feature/accueil/presentation/widget/header.dart';
-import 'package:exercice_guillaume/feature/title_details/presentation/page/title_details_page.dart';
+
+import 'package:exercice_guillaume/core/widget/app_bar_widget.dart';
+import 'package:exercice_guillaume/feature/details_title/presentation/page/title_details_page.dart';
 import 'package:flutter/material.dart';
 
-class Accueil extends StatelessWidget {
-  const Accueil({Key? key}) :super(key: key);
+class HomePage extends StatelessWidget {
+  const HomePage({Key? key}) :super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: const Header(title: 'Accueil'),
+      appBar: const AppBarWidget(title: 'home'),
       body:
        ListView(
         padding: const EdgeInsets.all(8),
