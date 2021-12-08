@@ -1,10 +1,15 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 
 import 'feature/home/presentation/pages/home_page.dart';
-
+import 'feature/info/presentation/cubit/info_cubit.dart';
 
 void main() {
-  runApp(const MyApp());
+  BlocProvider<InfoCubit> _infoCubit() => BlocProvider<InfoCubit>(
+        create: (BuildContext context) => InfoCubit(),
+        child: const MyApp(),
+      );
+  runApp(_infoCubit());
 }
 
 class MyApp extends StatelessWidget {
@@ -21,4 +26,3 @@ class MyApp extends StatelessWidget {
     );
   }
 }
-
